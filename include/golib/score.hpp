@@ -6,6 +6,12 @@
 namespace go
 {
 
+struct Score
+{
+  PlayerSummary white;
+  PlayerSummary black;
+};
+
 struct PlayerSummary
 {
   std::list<Position> liveStones;
@@ -17,10 +23,8 @@ struct PlayerSummary
 // To be used as argument for Board::iterate
 struct StoneCounter
 {
-  PlayerSummary white;
-  PlayerSummary black;
-
-  void operator (const Position& pos, PositionState state);
+  Score score;
+  void operator() (const Position& pos, PositionState state);
 };
 
 }

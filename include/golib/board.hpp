@@ -10,7 +10,6 @@
 namespace go
 {
 
-
 struct Board : boost::noncopyable
 {
   static const size_t SIZE = 19;
@@ -21,20 +20,19 @@ struct Board : boost::noncopyable
 
   explicit Board (const std::vector<Position>& freeHandicap);
 
-  explicit Board (const std::vector<Position>& whiteStones,
-                  const std::vector<Position>& blackStones);
-
   PositionState at (const Position& position) const;
 
   void iterate (Iterator it) const;
 
-  void play (const Move&);
+  void play (PlayerColor player, const Position& position);
 
-  PlayerColor nextMovePlayer () const;
+  uint64_t hash() const;
 
-  bool isLegalMove (const Position& position) const;
+  private:
+  
+    PositionState state_[SIZE * SIZE];
 
-  private: PositionState state_[SIZE * SIZE];
+    uint64_t hash_;
 };
 
 }
