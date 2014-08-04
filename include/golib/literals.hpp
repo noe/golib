@@ -1,3 +1,8 @@
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Copyright Noe Casas, 2014                                                 //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
 #ifndef GO_USER_DEFINED_LITERALS_HEADER_SEEN__
 #define GO_USER_DEFINED_LITERALS_HEADER_SEEN__
 
