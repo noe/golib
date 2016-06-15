@@ -20,6 +20,7 @@ namespace  // anonymous namespace for secret stuff
   }
 }
 
+
 namespace go
 {
 
